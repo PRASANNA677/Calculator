@@ -1,0 +1,93 @@
+.container{
+    width: 350px;
+    /* height: auto; */
+    background-color: red;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 17px;
+    background: #2e2d2d;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px #1a1a1a,
+             -20px -20px 60px #242424;
+}
+input{
+    width: 100%;
+    padding: 15px;
+    margin: 15px auto; 
+    box-sizing: border-box;
+    outline: none;
+    font-size: 30px;
+    background-color:pink;
+    color: blue;
+    background: linear-gradient(145deg, #323232, #3c3c3c);
+    box-shadow:  9px 9px 18px #343434,
+             -9px -9px 18px #3c3c3c;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+    
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 10px;
+    color:  white;
+    /* border: none; */
+    /* border-radius: 50px; */
+    background: linear-gradient(145deg, #323232, #3c3c3c);
+    box-shadow:  9px 9px 18px #343434,
+             -9px -9px 18px #3c3c3c;
+
+}
+@media(max-width : 600px){
+    .container{
+        width: 80%;
+        /* height: auto; */
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 17px;
+        background: #2e2d2d;
+        box-shadow: inset 14px 14px 28px #201f1f,
+                    inset -14px -14px 28px #3c3b3b;
+    }
+    input{
+        width: 100%;
+        padding: 15px;
+        margin: 15px auto; 
+        font-size: 30px;
+        font-weight: bolder;
+        box-sizing: border-box;
+        outline: none;
+        background-color: aquamarine;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        
+        
+    }
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 60px;
+        font-size: 30px;
+        border-radius: 10px;
+        color: #ffff;
+        /* border: none; */
+        background: linear-gradient(145deg, #313030, #292929);
+        box-shadow:  14px 14px 28px #201f1f,
+                    -14px -14px 28px #3c3b3b;
+    
+    }
+}

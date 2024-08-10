@@ -1,39 +1,34 @@
-var inputData=document.getElementById("input")
+var inputData = document.getElementById("input");
 
-function targetInput(x){
-    inputData.value=inputData.value+x
-  
+function targetInput(x) {
+    inputData.value += x;
 }
 
-function calculate(){
-    const data=document.getElementById('input').value
-    try{
-        let result=eval(data)
-        inputData.value=result
-        if(inputData.value=="Undefined"){
-            inputData.value="Enter Input"
-            inputData.style.color='red'
-            setTimeout(()=>{
-               inputData.value=''
-            },1000)
+function calculate() {
+    const data = inputData.value;
+    try {
+        let result = new Function('return ' + data)();
+        if (result === undefined || isNaN(result)) {
+            throw new Error();
         }
-        else{
-            inputData.value=result
-        }
-    }
-    catch{
-        inputData.value="Enter the Proper Expression"
-        inputData.style.color='red'
-        setTimeout(()=>{
-            inputData.value=''
-         },1000)
+        
+        inputData.value = result;
+        inputData.style.color = 'black'; 
+    } catch {
+        inputData.value = "Enter the Proper Expression";
+        inputData.style.color = 'red';
+        setTimeout(() => {
+            inputData.value = '';
+            inputData.style.color = 'black'; 
+        }, 1000);
     }
 }
 
-function allclear(){
-    inputData.value=''
+function allclear() {
+    inputData.value = '';
+    inputData.style.color = 'black';
 }
 
-function remove(){
-    inputData.value=inputData.value.slice(0,-1)
+function remove() {
+    inputData.value = inputData.value.slice(0, -1);
 }
